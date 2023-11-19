@@ -1,0 +1,16 @@
+We page requirements:
+
+Verticle stacked pill buttons
+
+First Button Labeled Start 8 (Available only When timer not running)
+Second Button Labeled Start 20 (Available only When timer not running)
+Text Display Box (Initializes at 00:00 {mm:ss})
+Third Button Labeled Stop (Available only When timer running)
+
+When the Button Labeled Start 8 or 20 is pressed, GPIO27 should go high to close a relay.
+ 
+When the Relay is closed, the Start 8 and Start 20 Buttons should be greyed out and unavailable and the text display box should display a countdown in minutes from either 8 or 20 depending on which button was pressed. 
+
+If the countdown timer is running, the STOP button should be Red and available. If pressed, it should return the timer to 00:00 and turn GPIO27 back to low for relay open. 
+
+When a timer reaches 00:00 by countdown the GPIO27 should return to low, opening the relay, and the entire webpage should return to initial status. 
